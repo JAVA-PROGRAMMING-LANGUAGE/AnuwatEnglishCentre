@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXComboBox?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="panePayment" prefHeight="510.0" prefWidth="1000.0" style="-fx-background-color: white;" stylesheets="@../resource/sub_form.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Label layoutX="49.0" layoutY="360.0" text="Other" />
+      <Label layoutX="95.0" layoutY="65.0" text="Year">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <JFXComboBox layoutX="135.0" layoutY="61.0" prefHeight="25.0" prefWidth="180.0" />
+      <Label layoutX="347.0" layoutY="65.0" text="Month">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <Label layoutX="614.0" layoutY="65.0" text="Teacher">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Label>
+      <JFXComboBox layoutX="403.0" layoutY="62.0" prefHeight="25.0" prefWidth="180.0" />
+      <JFXComboBox layoutX="678.0" layoutY="61.0" prefHeight="25.0" prefWidth="180.0" />
+      <JFXButton alignment="CENTER" layoutX="202.0" layoutY="404.0" prefHeight="28.0" prefWidth="77.0" style="-fx-background-color: #77216F;" text="Update" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Ubuntu Bold" size="14.0" />
+         </font>
+      </JFXButton>
+      <TableView layoutX="332.0" layoutY="119.0" prefHeight="347.0" prefWidth="609.0">
+         <columns>
+            <TableColumn prefWidth="75.0" text="S_id" />
+            <TableColumn prefWidth="75.0" text="Name" />
+            <TableColumn prefWidth="75.0" text="Amount" />
+            <TableColumn prefWidth="75.0" text="Date" />
+            <TableColumn prefWidth="75.0" text="Other" />
+         </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+      </TableView>
+      <Label layoutX="49.0" layoutY="244.0" text="Name" />
+      <Label layoutX="49.0" layoutY="284.0" text="Amount" />
+      <Label layoutX="49.0" layoutY="322.0" text="Date" />
+      <JFXTextField editable="false" layoutX="127.0" layoutY="233.0" prefHeight="38.0" prefWidth="180.0" />
+      <JFXTextField layoutX="127.0" layoutY="273.0" prefHeight="38.0" prefWidth="180.0" />
+      <JFXTextField layoutX="127.0" layoutY="311.0" prefHeight="38.0" prefWidth="180.0" />
+      <JFXTextField layoutX="127.0" layoutY="349.0" prefHeight="38.0" prefWidth="180.0" />
+      <Label layoutX="406.0" layoutY="22.0" styleClass="title" text="Payment Information">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
