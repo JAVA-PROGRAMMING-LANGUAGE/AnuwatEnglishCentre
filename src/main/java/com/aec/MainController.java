@@ -5,13 +5,17 @@
  */
 package com.aec;
 
+import de.jensd.fx.glyphs.materialicons.MaterialIconView;
 import java.net.URL;
 import java.util.ResourceBundle;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.StackPane;
+import javafx.stage.Stage;
 
 /**
  * FXML Controller class
@@ -28,6 +32,10 @@ public class MainController implements Initializable {
     private AnchorPane paneMain;
     @FXML
     private AnchorPane panePayment;
+    @FXML
+    private MaterialIconView btnBack;
+    @FXML
+    private StackPane stackPane;
 
     /**
      * Initializes the controller class.
@@ -50,6 +58,7 @@ public class MainController implements Initializable {
     }
     
     private void hidePane() {
+        btnBack.setVisible(true);
         paneMain.setVisible(false);
         paneTeacher.setVisible(false);
         paneStudent.setVisible(false);
@@ -86,6 +95,22 @@ public class MainController implements Initializable {
     private void clickBack(MouseEvent event) {
         hidePane();
         paneMain.setVisible(true);
+        btnBack.setVisible(false);
     }
-    
+
+    @FXML
+    private void clickClose(MouseEvent event) {
+        Platform.exit();
+    }
+
+    @FXML
+    private void clickMinimize(MouseEvent event) {
+        Stage stage = (Stage) stackPane.getScene().getWindow();
+        stage.setIconified(true);
+    }
+
+    @FXML
+    private void clickLock(MouseEvent event) {
+    }
+
 }

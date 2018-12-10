@@ -13,16 +13,16 @@
 <?import javafx.scene.layout.StackPane?>
 <?import javafx.scene.text.Font?>
 
-<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aec.MainController">
+<StackPane fx:id="stackPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1000.0" stylesheets="@../resource/main.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.aec.MainController">
     <children>
         <BorderPane prefHeight="200.0" prefWidth="200.0">
             <top>
                 <AnchorPane prefHeight="40.0" prefWidth="1100.0" style="-fx-background-color: #607D8B;" BorderPane.alignment="CENTER">
                     <children>
-                        <MaterialIconView fill="WHITE" glyphName="ARROW_BACK" layoutX="20.0" layoutY="30.0" onMouseClicked="#clickBack" size="20" styleClass="nav" />
-                        <MaterialIconView fill="WHITE" glyphName="CLOSE" layoutX="954.0" layoutY="30.0" size="20" styleClass="nav" />
-                        <MaterialIconView fill="WHITE" glyphName="EXPAND_MORE" layoutX="911.0" layoutY="33.0" size="25" styleClass="nav" />
-                        <MaterialIconView fill="WHITE" glyphName="LOCK_OUTLINE" layoutX="871.0" layoutY="31.0" size="20" styleClass="nav" />
+                        <MaterialIconView fx:id="btnBack" fill="WHITE" glyphName="ARROW_BACK" layoutX="20.0" layoutY="30.0" onMouseClicked="#clickBack" size="20" styleClass="nav" />
+                        <MaterialIconView fill="WHITE" glyphName="CLOSE" layoutX="954.0" layoutY="30.0" onMouseClicked="#clickClose" size="20" styleClass="nav" />
+                        <MaterialIconView fill="WHITE" glyphName="EXPAND_MORE" layoutX="911.0" layoutY="33.0" onMouseClicked="#clickMinimize" size="25" styleClass="nav" />
+                        <MaterialIconView fill="WHITE" glyphName="LOCK_OUTLINE" layoutX="871.0" layoutY="31.0" onMouseClicked="#clickLock" size="20" styleClass="nav" />
                     </children>
                 </AnchorPane>
             </top>
@@ -30,15 +30,15 @@
                 <AnchorPane prefHeight="40.0" prefWidth="200.0" style="-fx-background-color: #607D8B;" BorderPane.alignment="CENTER" />
             </bottom>
             <left>
-                <AnchorPane prefHeight="200.0" prefWidth="0.0" style="-fx-background-color: #607D8B;" BorderPane.alignment="CENTER" />
+                <AnchorPane prefHeight="200.0" prefWidth="2.0" style="-fx-background-color: #607D8B;" BorderPane.alignment="CENTER" />
             </left>
             <right>
-                <AnchorPane prefHeight="200.0" prefWidth="0.0" style="-fx-background-color: #607D8B;" BorderPane.alignment="CENTER" />
+                <AnchorPane prefHeight="200.0" prefWidth="2.0" style="-fx-background-color: #607D8B;" BorderPane.alignment="CENTER" />
             </right>
          <center>
-            <AnchorPane prefHeight="510.0" prefWidth="1000.0" style="-fx-background-color: white;" BorderPane.alignment="CENTER">
+            <AnchorPane style="-fx-background-color: red;" BorderPane.alignment="CENTER">
                <children>
-                  <AnchorPane fx:id="paneMain" layoutY="-8.0" prefHeight="510.0" prefWidth="1000.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                  <AnchorPane fx:id="paneMain" layoutX="5.0" layoutY="-8.0" prefHeight="520.0" prefWidth="996.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
                      <children>
                         <ImageView fitHeight="338.0" fitWidth="257.0" layoutX="217.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
                            <image>
@@ -148,10 +148,13 @@
                         </HBox>
                      </children>
                   </AnchorPane>
-                  <AnchorPane fx:id="paneTeacher" prefHeight="510.0" prefWidth="1000.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                  <AnchorPane fx:id="paneStudent" layoutX="5.0" prefHeight="510.0" prefWidth="1000.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
-                  <AnchorPane fx:id="panePayment" layoutX="10.0" layoutY="10.0" prefHeight="510.0" prefWidth="1000.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <AnchorPane fx:id="paneTeacher" prefHeight="520.0" prefWidth="996.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <AnchorPane fx:id="paneStudent" layoutX="5.0" prefHeight="520.0" prefWidth="996.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
+                  <AnchorPane fx:id="panePayment" layoutX="10.0" layoutY="10.0" prefHeight="520.0" prefWidth="996.0" visible="false" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0" />
                </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
             </AnchorPane>
          </center>
         </BorderPane>
