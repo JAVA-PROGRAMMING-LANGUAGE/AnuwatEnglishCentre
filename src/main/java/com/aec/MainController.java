@@ -15,6 +15,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
 /**
@@ -25,17 +26,17 @@ import javafx.stage.Stage;
 public class MainController implements Initializable {
     
     @FXML
-    private AnchorPane paneTeacher;
+    private VBox paneTeacher;
     @FXML
-    private AnchorPane paneStudent;
+    private VBox paneStudent;
     @FXML
-    private AnchorPane paneMain;
-    @FXML
-    private AnchorPane panePayment;
+    private VBox panePayment;
     @FXML
     private MaterialIconView btnBack;
     @FXML
     private StackPane stackPane;
+    @FXML
+    private AnchorPane paneHome;
 
     /**
      * Initializes the controller class.
@@ -43,6 +44,9 @@ public class MainController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         try {
+            //AnchorPane home = FXMLLoader.load(getClass().getResource("/fxml/Home.fxml"));
+            //  paneHome.getChildren().add(home);
+
             AnchorPane teacher = FXMLLoader.load(getClass().getResource("/fxml/Teacher.fxml"));
             paneTeacher.getChildren().add(teacher);
             
@@ -59,7 +63,7 @@ public class MainController implements Initializable {
     
     private void hidePane() {
         btnBack.setVisible(true);
-        paneMain.setVisible(false);
+        paneHome.setVisible(false);
         paneTeacher.setVisible(false);
         paneStudent.setVisible(false);
         panePayment.setVisible(false);
@@ -84,17 +88,9 @@ public class MainController implements Initializable {
     }
     
     @FXML
-    private void clickExpense(MouseEvent event) {
-    }
-    
-    @FXML
-    private void clickReport(MouseEvent event) {
-    }
-    
-    @FXML
     private void clickBack(MouseEvent event) {
         hidePane();
-        paneMain.setVisible(true);
+        paneHome.setVisible(true);
         btnBack.setVisible(false);
     }
 
@@ -104,13 +100,21 @@ public class MainController implements Initializable {
     }
 
     @FXML
+    private void clickLock(MouseEvent event) {
+    }
+
+    @FXML
     private void clickMinimize(MouseEvent event) {
         Stage stage = (Stage) stackPane.getScene().getWindow();
         stage.setIconified(true);
     }
 
     @FXML
-    private void clickLock(MouseEvent event) {
+    private void clickExpense(MouseEvent event) {
+    }
+
+    @FXML
+    private void clickReport(MouseEvent event) {
     }
 
 }

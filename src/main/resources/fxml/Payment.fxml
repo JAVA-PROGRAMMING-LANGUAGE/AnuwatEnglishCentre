@@ -10,7 +10,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane fx:id="panePayment" prefHeight="510.0" prefWidth="1000.0" style="-fx-background-color: white;" stylesheets="@../resource/sub_form.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane fx:id="panePayment" style="-fx-background-color: white;" stylesheets="@../resource/sub_form.css" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <Label layoutX="49.0" layoutY="360.0" text="Other" />
       <Label layoutX="95.0" layoutY="65.0" text="Year">

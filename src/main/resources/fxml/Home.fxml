@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.materialicons.MaterialIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/8.0.111" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <ImageView fitHeight="338.0" fitWidth="257.0" layoutX="217.0" layoutY="120.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../resource/Logo%20AEC.jpg" />
+         </image>
+      </ImageView>
+      <Separator layoutX="497.0" layoutY="102.0" orientation="VERTICAL" prefHeight="300.0" />
+      <HBox alignment="CENTER_LEFT" layoutX="538.0" layoutY="140.0" onMouseClicked="#clickTeacher" prefHeight="40.0" prefWidth="179.0" style="-fx-border-color: #607D8B; -fx-border-radius: 0; -fx-border-width: 1;">
+         <children>
+            <MaterialIconView fill="ORANGE" glyphName="SCHOOL" size="30" />
+            <Label text="Teacher" textFill="#607d8b">
+               <font>
+                  <Font name="Ubuntu" size="22.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </HBox>
+      <Label layoutX="366.0" layoutY="31.0" text="Anuwat English Centre">
+         <font>
+            <Font name="Ubuntu Condensed" size="32.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER_LEFT" layoutX="538.0" layoutY="187.0" onMouseClicked="#clickStudent" prefHeight="40.0" prefWidth="179.0" style="-fx-border-color: #607D8B; -fx-border-radius: 0; -fx-border-width: 1;">
+         <children>
+            <MaterialIconView fill="ORANGE" glyphName="LOCAL_LIBRARY" size="30" />
+            <Label text="Student" textFill="#607d8b">
+               <font>
+                  <Font name="Ubuntu" size="22.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="538.0" layoutY="234.0" onMouseClicked="#clickPayment" prefHeight="40.0" prefWidth="179.0" style="-fx-border-color: #607D8B; -fx-border-radius: 0; -fx-border-width: 1;">
+         <children>
+            <MaterialIconView fill="ORANGE" glyphName="ATTACH_MONEY" size="30" />
+            <Label text="Payment" textFill="#607d8b">
+               <font>
+                  <Font name="Ubuntu" size="22.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="538.0" layoutY="281.0" onMouseClicked="#clickExpense" prefHeight="40.0" prefWidth="179.0" style="-fx-border-color: #607D8B; -fx-border-radius: 0; -fx-border-width: 1;">
+         <children>
+            <MaterialIconView fill="ORANGE" glyphName="ATTACH_MONEY" size="30" />
+            <Label text="Expense" textFill="#607d8b">
+               <font>
+                  <Font name="Ubuntu" size="22.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </HBox>
+      <HBox alignment="CENTER_LEFT" layoutX="538.0" layoutY="330.0" onMouseClicked="#clickReport" prefHeight="40.0" prefWidth="179.0" style="-fx-border-color: #607D8B; -fx-border-radius: 0; -fx-border-width: 1;">
+         <children>
+            <MaterialIconView fill="ORANGE" glyphName="POLL" size="30" />
+            <Label text="Report" textFill="#607d8b">
+               <font>
+                  <Font name="Ubuntu" size="22.0" />
+               </font>
+               <HBox.margin>
+                  <Insets left="5.0" />
+               </HBox.margin>
+            </Label>
+         </children>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </HBox>
+   </children>
+</AnchorPane>

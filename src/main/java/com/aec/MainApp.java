@@ -17,9 +17,10 @@ public class MainApp extends Application {
         
         Scene scene = new Scene(root);
 
-        stage.setTitle("JavaFX and Maven");
-        stage.setScene(scene);
+        //stage.setTitle("JavaFX and Maven");
         stage.initStyle(StageStyle.UNDECORATED);
+        stage.setScene(scene);
+
         stage.show();
     }
 
